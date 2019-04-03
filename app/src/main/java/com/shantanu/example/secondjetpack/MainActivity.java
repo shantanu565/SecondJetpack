@@ -1,9 +1,8 @@
 package com.shantanu.example.secondjetpack;
 
-import android.arch.lifecycle.Observer;
+
 import android.databinding.DataBindingUtil;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
@@ -13,6 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 

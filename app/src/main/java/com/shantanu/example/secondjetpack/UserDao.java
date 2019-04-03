@@ -1,9 +1,9 @@
 package com.shantanu.example.secondjetpack;
 
-import android.arch.lifecycle.LiveData;
 
 import java.util.List;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
