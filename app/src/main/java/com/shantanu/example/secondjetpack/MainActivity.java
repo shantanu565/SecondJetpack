@@ -1,8 +1,5 @@
 package com.shantanu.example.secondjetpack;
 
-
-import android.databinding.DataBindingUtil;
-import android.support.annotation.Nullable;
 import android.os.Bundle;
 import android.view.View;
 
@@ -13,6 +10,7 @@ import java.util.List;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -33,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         myViewModel = ViewModelProviders.of(this).get(MyViewModel.class);
         myViewModel.getUsersVM().observe(this, new Observer<List<User>>() {
             @Override
-            public void onChanged(@Nullable List<User> userModels) {
+            public void onChanged(List<User> userModels) {
                 adapter.setUserModelList(userModels);
                 adapter.notifyDataSetChanged();
             }

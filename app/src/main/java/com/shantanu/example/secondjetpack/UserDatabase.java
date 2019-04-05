@@ -2,8 +2,6 @@ package com.shantanu.example.secondjetpack;
 
 import android.content.Context;
 import android.os.AsyncTask;
-import android.support.annotation.NonNull;
-
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
@@ -27,7 +25,7 @@ public abstract class UserDatabase extends RoomDatabase {
 
     private static RoomDatabase.Callback roomCallback = new RoomDatabase.Callback() {
         @Override
-        public void onCreate(@NonNull SupportSQLiteDatabase db) {
+        public void onCreate(SupportSQLiteDatabase db) {
             super.onCreate(db);
         }
     };
