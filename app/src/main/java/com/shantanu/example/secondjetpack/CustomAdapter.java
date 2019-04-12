@@ -1,16 +1,19 @@
 package com.shantanu.example.secondjetpack;
 
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
+
 import com.shantanu.example.secondjetpack.databinding.RowlayoutBinding;
+
 import java.util.List;
 
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder> {
-
+    Context context;
     private List<User> userModelList;
     private RowlayoutBinding rowItemLayoutBinding;
 
@@ -18,8 +21,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         this.userModelList = userModelList;
     }
 
+    public CustomAdapter(Context context, List<User> users) {
+        this.context = context;
+        this.userModelList = users;
+    }
+
     @Override
-    public ViewHolder onCreateViewHolder( ViewGroup viewGroup, int i) {
+    public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         rowItemLayoutBinding = DataBindingUtil.inflate(LayoutInflater.from(viewGroup.getContext()), R.layout.rowlayout, viewGroup, false);
         return new ViewHolder(rowItemLayoutBinding);
     }
